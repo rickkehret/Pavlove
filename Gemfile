@@ -5,11 +5,19 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
+group :development do
+  gem 'sqlite3'
+  gem 'rspec-rails', '2.6.1'
+end
+
+group :test do
+  gem 'sqlite3'
+  gem 'rspec-rails', '2.6.1'
+  gem 'webrat', '0.7.1'
+end
+
 group :production do
   gem 'pg'
-end
-group :development, :test do
-  gem 'sqlite3'
 end
 
 # Gems used only for assets and not required
