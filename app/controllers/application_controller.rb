@@ -2,15 +2,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   
   def home
-    @title = "Pavlove | Home"
+    @title = "Home"
   end
 
   def contact
-    @title = "Pavlove | Contact"
+    @title = "Contact"
   end
 
   def about
-    @title = "Pavlove | About"
+    @title = "About"
   end
   
 end
