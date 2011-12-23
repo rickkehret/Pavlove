@@ -21,7 +21,7 @@ DemoApp::Application.configure do
   config.assets.digest = true
 
   # for mailer RK
-  config.action_mailer.default_url_options = { :host => 'ip-10-194-222-192' }
+  config.action_mailer.default_url_options = { :host => 'pavlove.herokuapp.com' }
   
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
