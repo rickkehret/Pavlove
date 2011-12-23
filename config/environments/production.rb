@@ -21,7 +21,7 @@ DemoApp::Application.configure do
   config.assets.digest = true
 
   # for mailer RK
-  config.action_mailer.default_url_options = { :host => 'http://ec2-107-21-254-13.compute-1.amazonaws.com' }
+  config.action_mailer.default_url_options = { :host => 'ec2-107-21-254-13.compute-1.amazonaws.com' }
   
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
