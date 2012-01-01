@@ -8,12 +8,16 @@ gem 'rails', '3.1.3'
 group :development do
   gem 'sqlite3'
   gem 'rspec-rails', '2.8.0.rc1'
+	gem 'annotate', '2.4.0'
 end
 
 group :test do
   gem 'sqlite3'
   gem 'rspec-rails', '2.8.0.rc1'
   gem 'webrat', '0.7.1'
+  # Pretty printed test output
+  gem 'turn', '~> 0.8.3', :require => false
+	gem 'annotate', '2.4.0'
 end
 
 group :production do
@@ -42,8 +46,3 @@ gem 'net-dns'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-
-group :test do
-  # Pretty printed test output
-  gem 'turn', '~> 0.8.3', :require => false
-end

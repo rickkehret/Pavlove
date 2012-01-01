@@ -27,9 +27,9 @@ DemoApp::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 'wa.tt',
-    :user_name            => 'rick@wa.tt',
-    :password             => 'l0v3st4cy',
+    :domain               => 'rickkehret.com',
+    :user_name            => 'rick@rickkehret.com',
+    :password             => ';lkj7y6t',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
   

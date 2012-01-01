@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Body:</b>
+  <%= @inspiration.body %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @inspiration.author %>
+</p>
+
+
+<%= link_to 'Edit', edit_inspiration_path(@inspiration) %> |
+<%= link_to 'Back', inspirations_path %>

@@ -30,4 +30,15 @@ DemoApp::Application.configure do
   
   # for mailer RK
   config.action_mailer.default_url_options = { :host => 'localhost' }
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'rickkehret.com',
+    :user_name            => 'rick@rickkehret.com',
+    :password             => ';lkj7y6t',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
+    
 end

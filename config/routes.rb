@@ -1,5 +1,5 @@
 DemoApp::Application.routes.draw do
-  get "users/new"
+  resources :inspirations
 
   match '/signup',  :to => 'users#new'
     
