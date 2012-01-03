@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
+gem 'gravatar_image_tag', '1.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -18,6 +19,7 @@ group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 	gem 'annotate', '2.4.0'
+	gem 'factory_girl_rails', '1.0'
 end
 
 group :production do
