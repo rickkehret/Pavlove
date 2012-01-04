@@ -48,12 +48,11 @@ class UsersController < ApplicationController
       if @user.save
         # Tell the UserMailer to send welcome email
         UserMailer.welcome_email(@user).deliver
-        
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render json: @user, status: :created, location: @user }
+        flash[:success] = "Welcome to the Sample App!"
+        format.html { redirect_to @user }
       else
+        @title = "Sign Up"
         format.html { render action: "new" }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
