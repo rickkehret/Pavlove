@@ -1,7 +1,12 @@
 DemoApp::Application.routes.draw do
+  resources :microposts
+  resources :users
   resources :inspirations
+  resources :sessions, :only => [:new, :create, :destroy]
 
   match '/signup',  :to => 'users#new'
+  match '/signin',  :to => 'sessions#new'
+  match '/signout',  :to => 'sessions#destroy'
     
 	match '/contact',	:to => 'pages#contact'
 	match '/about',		:to => 'pages#about'
@@ -9,9 +14,9 @@ DemoApp::Application.routes.draw do
 
   root :to => 'pages#home'
   
-  resources :microposts
+  
 
-  resources :users
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

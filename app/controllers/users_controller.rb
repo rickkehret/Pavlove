@@ -46,9 +46,10 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        sign_in @user
         # Tell the UserMailer to send welcome email
         UserMailer.welcome_email(@user).deliver
-        flash[:success] = "Welcome to the Sample App!"
+        flash[:success] = "Welcome to Pavlove!"
         format.html { redirect_to @user }
       else
         @title = "Sign Up"
