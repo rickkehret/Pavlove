@@ -172,7 +172,12 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-
+ul.users {
+	margin-top: 1em;
+}
+.users li {
+	list-style: none;
+}
 footer nav {
   float: none;
 }

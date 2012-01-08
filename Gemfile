@@ -10,6 +10,8 @@ group :development do
   gem 'sqlite3'
   gem 'rspec-rails', '2.8.0.rc1'
 	gem 'annotate', '2.4.0'
+	gem 'faker', '1.0.1'
+	gem 'will_paginate', '3.0.2'
 end
 
 group :test do
