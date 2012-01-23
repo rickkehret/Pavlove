@@ -1,5 +1,4 @@
 DemoApp::Application.routes.draw do
-  resources :microposts
   resources :users
   resources :inspirations
   resources :sessions, :only => [:new, :create, :destroy]

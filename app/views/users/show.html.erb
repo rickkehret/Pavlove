@@ -7,10 +7,17 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+      <% unless @user.inspirations.empty? %>
+        <table class="inspirations" summary="User inspirations">
+          <%= render @inspirations %>
+        </table>
+        <%= will_paginate @inspirations %>
+      <% end %>
     </td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />
       <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+      <strong>Inspirations</strong> <%= @user.inspirations.count %>
     </td>
   </tr>
 </table>

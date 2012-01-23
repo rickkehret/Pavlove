@@ -181,3 +181,57 @@ ul.users {
 footer nav {
   float: none;
 }
+h1.inspiration {
+  margin-bottom: 0.3em;
+}
+
+table.inspirations {
+  margin-top: 1em;
+}
+
+table.inspirations tr {
+  height: 70px;
+}
+
+table.inspirations tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.inspirations tr td.inspiration {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.inspirations tr td.inspiration span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
+div.user_info img {
+  padding-right: 0.1em;
+}
+
+div.user_info a {
+  text-decoration: none;
+}
+
+div.user_info span.user_name {
+  position: absolute;
+}
+
+div.user_info span.inspirations {
+  font-size: 80%;
+}
+
+form.new_inspiration {
+  margin-bottom: 2em;
+}
+
+form.new_inspiration textarea {
+  height: 4em;
+  margin-bottom: 0;
+}

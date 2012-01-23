@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120108025702) do
+ActiveRecord::Schema.define(:version => 20120109015824) do
 
   create_table "inspirations", :force => true do |t|
     t.string   "body"
     t.string   "author"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "microposts", :force => true do |t|
@@ -26,6 +27,16 @@ ActiveRecord::Schema.define(:version => 20120108025702) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "user_inspirations", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "inspiration_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_inspirations", ["inspiration_id"], :name => "index_user_inspirations_on_inspiration_id"
+  add_index "user_inspirations", ["user_id"], :name => "index_user_inspirations_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

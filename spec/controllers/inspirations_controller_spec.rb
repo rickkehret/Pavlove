@@ -28,13 +28,30 @@ describe InspirationsController do
   end
 
   describe "GET index" do
-    it "assigns all inspirations as @inspirations" do
-      inspiration = Inspiration.create! valid_attributes
-      get :index
-      assigns(:inspirations).should eq([inspiration])
+    
+    describe "for signed-in users" do
+      
     end
-  end
+  
+    it "should be successful" do
+      get :index
+      response.should be_success
+    end
 
+    it "should have the right title" do
+      get :index
+      response.should have_selector("title", :content => "All Inspirations")
+    end
+
+    it "should have an element for each user" do
+      get :index
+      @inspirations[0..2].each do |user|
+        response.should have_selector("li", :content => inspiration.body)
+      end
+    end  
+      
+  end
+ 
   describe "GET show" do
     it "assigns the requested inspiration as @inspiration" do
       inspiration = Inspiration.create! valid_attributes

@@ -87,6 +87,14 @@ describe UsersController do
       get :show, :id => @user
       response.should have_selector("h1>img", :class => "gravatar")
     end
+    
+    it "should show the user's inspirations" do
+      in1 = Factory(:inspiration, :user => @user, :body => "Foo bar")
+      in2 = Factory(:inspiration, :user => @user, :body => "Baz quux")
+      get :show, :id => @user
+      response.should have_selector("span.content", :body => in1.content)
+      response.should have_selector("span.content", :body => in2.content)
+    end
   end
   
   describe "GET 'new'" do

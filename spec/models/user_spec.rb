@@ -145,6 +145,26 @@ describe User do
       @user.toggle!(:admin)
       @user.should be_admin
     end
-    
   end
+  
+  describe "inspiration associations" do
+
+    before(:each) do
+      @user = User.create(@attr)
+    end
+
+    it "should have a inspirations attribute" do
+      @user.should respond_to(:inspirations)
+      @in1 = Factory(:inspiration, :user => @user, :created_at => 1.day.ago)
+      @in2 = Factory(:inspiration, :user => @user, :created_at => 1.hour.ago)
+    end
+    
+    it "should destroy associated inspirations" do
+      @user.destroy
+      [@in1, @in2].each do |inspiration|
+        Inspiration.find_by_id(inspiration.id).should be_nil
+      end
+    end
+  end
+  
 end

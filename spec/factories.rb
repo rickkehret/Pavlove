@@ -13,3 +13,9 @@ end
 Factory.sequence :email do |n|
   "person-#{n}@example.com"
 end
+
+Factory.define :inspiration do |inspiration|
+  inspiration.body    "Good quote"
+  inspiration.author  "Author name"
+  inspiration.association :user
+end
