@@ -110,6 +110,8 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (= 2.8.0.rc1)
+    rufus-scheduler (2.0.16)
+      tzinfo (>= 0.3.23)
     sass (3.1.12)
     sass-rails (3.1.5)
       actionpack (~> 3.1.0)
@@ -153,6 +155,7 @@ DEPENDENCIES
   pg
   rails (= 3.1.3)
   rspec-rails (= 2.8.0.rc1)
+  rufus-scheduler (= 2.0.16)
   sass-rails (~> 3.1.5)
   spork (= 0.8.5)
   sqlite3

@@ -7,9 +7,9 @@ class UserMailer < ActionMailer::Base
     mail(:to => user.email, :subject => "Welcome to Pavlove")
   end
   
-  def pav_email(user)
+  def inspiration_email(user)
       @user = user
       @url = "http://pavlove.heroku.com"
       mail(:to => user.email, :from => "The One", :subject => "Gratitude")
-    end
+  end
 end
