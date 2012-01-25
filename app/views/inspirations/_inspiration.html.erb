@@ -1,8 +1,11 @@
 <tr>
   <td class="inspirations">
-    <span class="content"><%= inspiration.content %></span>
-    <span class="timestamp">
-      Posted <%= time_ago_in_words(inspiration.created_at) %> ago.
+    <span class="body"><%= inspiration.body %></span>
+    <p class="author">-- <%= inspiration.author %></p>
+    <span class="remove-inspiration">
+    	<%= link_to "delete", inspiration, :method => :delete, 
+    									   :confirm => "You sure?",
+               	                  		   :title => "Delete this entry" %>
     </span>
   </td>
 </tr>

@@ -1,11 +1,23 @@
-<h1>Welcome to Pavlove</h1>
-<p>Description</p>
-<!--
-<p>
-I developed this simple app to "scratch my own itch" of wanting to be mindful all day every day. To often I find myself lost in thoughts of future or past.  I have many great book and audio that I read or listen to often, but the vast majority of the day it's just me...   I needed an almost constant reminder of the beautiful things I'd rather be focusing on in order to bring more of _that_ into my life.
-</p>
--->
-<br><br />
+<% if signed_in? %>
+	<table class="front" summary="For signed-in users">
+		<tr>
+			<td class="main">
+				<h1 class="inspiration">Inspired yet?</h1>
+				<%= render 'shared/inspiration_form' %>
+			</td>
+			<td class="sidebar round">
+        		<%= render 'shared/user_info' %>
+      		</td>
+		</tr>
+	</table>
+<% else %>
+	<div id="app-title">Welcome to Pavlove</div>
+	<div id="app-tagline">Helping you stay connected and inspired!</div>
+	<div id="app-description">
+		<br><br />Enter your favorite "inspirations" (quotes, sayings, prayers, mantras, etc..)
+		and how often you would like them delivered to your inbox.  We'll do the rest</div>
+	<br><br />
 
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+	<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+<% end %>
 

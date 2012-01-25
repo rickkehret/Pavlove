@@ -33,11 +33,11 @@ describe Inspiration do
       Inspiration.new(@attr).should_not be_valid
     end
 
-    it "should require nonblank content" do
+    it "should require nonblank body" do
       @user.inspirations.build(:body => "  ").should_not be_valid
     end
 
-    it "should reject long content" do
+    it "should reject long body" do
       @user.inspirations.build(:body => "a" * 301).should_not be_valid
     end
   end

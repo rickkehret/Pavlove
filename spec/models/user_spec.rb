@@ -159,6 +159,10 @@ describe User do
       @in2 = Factory(:inspiration, :user => @user, :created_at => 1.hour.ago)
     end
     
+    it "should have the right quotes in the right order" do
+      @user.inspirations.should == [@in2, @in1]
+    end
+    
     it "should destroy associated inspirations" do
       @user.destroy
       [@in1, @in2].each do |inspiration|

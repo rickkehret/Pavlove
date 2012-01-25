@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
+  
   def home
     @title = "Home"
+    @inspiration = Inspiration.new if signed_in?
   end
 
   def contact
@@ -14,4 +16,5 @@ class PagesController < ApplicationController
   def help
     @title = "Help"
   end
+  
 end

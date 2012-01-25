@@ -29,7 +29,8 @@ section h1 {
 /* Links */
 
 a {
-  color: #09c;
+  //color: #09c;
+  color: #6C7476;
   text-decoration: none;
 }
 
@@ -68,6 +69,7 @@ nav ul li {
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
+  color: #6C7476;
 }
 
 nav ul li a:visited {
@@ -76,6 +78,39 @@ nav ul li a:visited {
 
 nav ul li a:hover {
   text-decoration: underline;
+}
+#app-title{
+	font-size: 36px;
+	font-weight:900;
+	color: #000000;
+	margin-left: auto;
+  	margin-right: auto;
+  	display: block;
+  	text-align: center;
+	//width: 500px;
+	margin-top: 50px;
+	//margin-bottom: 50px;
+	//border: 1px solid #000;
+}
+#app-tagline{
+	font-size: 18px;
+	font-weight:500;
+	color: #000000;
+	margin-left: auto;
+  	margin-right: auto;
+  	display: block;
+  	text-align: center;
+	margin-top: 20px;
+}
+#app-description{
+	margin-left: auto;
+  	margin-right: auto;
+  	display: block;
+  	//text-align: center;
+	width: 500px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	//border: 1px solid #000;
 }
 
 /* Sign up button */
@@ -86,14 +121,17 @@ a.signup_button {
   display: block;
   text-align: center;
   width: 190px;
-  color: #fff;
-  background: #006400;
+  color: #000;
+  background: #EE3233;
   font-size: 150%;
   font-weight: bold;
   padding: 20px;
+  margin-bottom: 30px;
 }
 div.field, div.actions {
   margin-bottom: 10px;
+  margin-top: 20px;
+  color: #999;
 }
 /* Round corners */
 
@@ -209,6 +247,19 @@ table.inspirations tr td.inspiration span.timestamp {
   display: block;
   font-size: 85%;
   color: #666;
+}
+/*
+ * for displaying inspirations on users profile page
+ */
+.body{
+	font-size: medium;
+}
+.author{
+	font-size: medium;
+	color: #999;
+}
+.remove-inspiration{
+	text-align:right;
 }
 
 div.user_info img {

@@ -1,0 +1,14 @@
+<%= form_for @inspiration do |f| %>
+	<%= render 'shared/error_messages', :object => f.object %>
+	<div class="field">
+		<%= label_tag 'inspiration', 'Enter Quote or other Inspiration (required field)'%>
+		<%= f.text_area :body %>
+	</div>
+	<div class="field">
+		<%= label_tag 'author', 'Enter Author or source (optional field)'%>
+		<%= f.text_field :author %>
+	</div>
+	<div class="actions">
+		<%= f.submit "Submit" %>
+	</div>
+<% end %>

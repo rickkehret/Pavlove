@@ -89,11 +89,11 @@ describe UsersController do
     end
     
     it "should show the user's inspirations" do
-      in1 = Factory(:inspiration, :user => @user, :body => "Foo bar")
-      in2 = Factory(:inspiration, :user => @user, :body => "Baz quux")
+      in1 = Factory(:inspiration, :user => @user, :body => "Foo bar", :author => "dude")
+      in2 = Factory(:inspiration, :user => @user, :body => "Baz quux", :author => "other guy")
       get :show, :id => @user
-      response.should have_selector("span.content", :body => in1.content)
-      response.should have_selector("span.content", :body => in2.content)
+      response.should have_selector("span.body", :body => in1.content)
+      response.should have_selector("span.body", :body => in2.content)
     end
   end
   

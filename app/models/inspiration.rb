@@ -5,5 +5,6 @@ class Inspiration < ActiveRecord::Base
   
   validates :body, :presence => true, :length => { :maximum => 300 }
   validates :user_id, :presence => true
-
+  
+  default_scope :order => 'inspirations.created_at DESC'
 end
